@@ -13,8 +13,8 @@ class PoliceController extends Controller
 
     public function store(Request $request){
         $validate= $request->validate([
-            'name'=>'required',
-            'age'=>'required',
+            'name'=>'required|string',
+            'age'=>'required|numeric',
             'country'=>'required|in:France,Espagne',
         ]);
 
