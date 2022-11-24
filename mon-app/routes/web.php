@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\SerieController;
+use App\Http\Controllers\PoliceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/series', [SerieController::class, 'index']);
 Route::get('/series/{serie}', [SerieController::class, 'show']);
+
+Route::get('/police', [SerieController::class, 'create']);
+Route::get('/police', [SerieController::class, 'store']);
 
 Route::get('/', function () {
     return view('welcome');
