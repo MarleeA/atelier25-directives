@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 class PoliceController extends Controller
 { 
 
-    public function create(){
-       return view('trips.create',['trips'=>['name'=>'ALCARAZ','age'=>25,'country'=>'france']]);
+    public function create(Request $request){
+       return view('trips.create',[
+        'name'=>$request->old('name'),
+        'age'=>$request->old('age'),
+        'country'=>$request->old('country'),
+    ]);
 
     }
 
