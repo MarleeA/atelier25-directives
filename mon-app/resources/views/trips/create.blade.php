@@ -1,6 +1,15 @@
 @extends('layout.app')
 
 @section('content')
+
+@if ($errors->any())
+@foreach ($errors->all() as $error)
+<ul>
+    <li>{{ $error }}</li>
+</ul>
+@endforeach
+@endif
+
 <form action="{{route('police.store')}}" method="POST">
 @csrf
         <input name="name" type="text">
