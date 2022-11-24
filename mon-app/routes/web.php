@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/series', [SerieController::class, 'index']);
 Route::get('/series/{serie}', [SerieController::class, 'show']);
 
-Route::get('/police', [SerieController::class, 'create']);
-Route::get('/police', [SerieController::class, 'store']);
+Route::get('/police/create', [PoliceController::class, 'create']);
+Route::post('/police', [PoliceController::class, 'store'])->name('police.store');
 
 Route::get('/', function () {
     return view('welcome');

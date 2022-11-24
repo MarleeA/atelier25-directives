@@ -7,5 +7,5 @@
 @endsection
 
 @section('content')
-<p>&copy;Marlee</p>
+
 @endsection
